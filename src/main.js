@@ -1,5 +1,3 @@
-import './style.css';
-
 // Theme Configuration
 const themeToggle = document.getElementById('theme-toggle');
 const root = document.documentElement;
