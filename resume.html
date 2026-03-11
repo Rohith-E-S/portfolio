@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - My Portfolio</title>
+</head>
+
+<body
+  class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans antialiased transition-colors duration-300">
+  <div id="app" class="max-w-5xl mx-auto px-6 py-8 md:px-8">
+    <header class="sticky top-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md py-4 z-50 mb-16">
+      <nav class="flex justify-between items-center">
+        <ul class="flex flex-wrap gap-4 md:gap-6 list-none m-0 p-0">
+          <li><a href="/" class="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white font-medium transition-colors">Home</a></li>
+          <li><a href="/#about" class="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white font-medium transition-colors">About</a></li>
+          <li><a href="/projects.html" class="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white font-medium transition-colors">Projects</a></li>
+          <li><a href="/resume.html" class="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white font-medium transition-colors">Resume</a></li>
+          <li><a href="/contact.html" class="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white font-medium transition-colors">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle theme"
+          class="text-xl p-2 rounded-full hover:scale-110 transition-transform">🌓</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="resume" class="mb-24">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+          <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Resume</h1>
+          <a href="/resume.pdf" download="Rohith_Resume.pdf" class="inline-flex items-center justify-center px-5 py-2.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium rounded-xl hover:bg-zinc-800 dark:hover:bg-white transition-colors w-max">
+            Download PDF
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          </a>
+        </div>
+        
+        <div class="space-y-16 max-w-3xl">
+          <!-- Experience Section -->
+          <div>
+            <h2 class="text-2xl font-semibold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-6 text-zinc-900 dark:text-zinc-100">Experience</h2>
+            
+            <div class="space-y-8">
+              <div>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                  <h3 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Senior Software Engineer</h3>
+                  <span class="text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-1 sm:mt-0">2023 - Present</span>
+                </div>
+                <p class="text-md font-medium text-zinc-600 dark:text-zinc-400 mb-3">Tech Company Inc. &bull; Remote</p>
+                <ul class="list-disc list-outside ml-5 text-zinc-600 dark:text-zinc-400 space-y-2 leading-relaxed">
+                  <li>Lead the development of the core product frontend using React and Tailwind CSS.</li>
+                  <li>Improved application performance by 40% through code splitting and lazy loading.</li>
+                  <li>Mentored junior engineers and conducted regular code reviews to maintain high quality.</li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                  <h3 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Software Engineer</h3>
+                  <span class="text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-1 sm:mt-0">2020 - 2023</span>
+                </div>
+                <p class="text-md font-medium text-zinc-600 dark:text-zinc-400 mb-3">Web Startup LLC &bull; New York, NY</p>
+                <ul class="list-disc list-outside ml-5 text-zinc-600 dark:text-zinc-400 space-y-2 leading-relaxed">
+                  <li>Built responsive and accessible web applications from scratch.</li>
+                  <li>Integrated third-party APIs and payment gateways.</li>
+                  <li>Collaborated closely with designers to ensure pixel-perfect implementation.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Section -->
+          <div>
+            <h2 class="text-2xl font-semibold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-6 text-zinc-900 dark:text-zinc-100">Education</h2>
+            <div>
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                <h3 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">B.S. in Computer Science</h3>
+                <span class="text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-1 sm:mt-0">2016 - 2020</span>
+              </div>
+              <p class="text-md font-medium text-zinc-600 dark:text-zinc-400">University of Technology</p>
+            </div>
+          </div>
+
+          <!-- Skills Section -->
+          <div>
+            <h2 class="text-2xl font-semibold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-6 text-zinc-900 dark:text-zinc-100">Skills</h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-800">JavaScript (ES6+)</span>
+              <span class="px-3 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-800">TypeScript</span>
+              <span class="px-3 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-800">React</span>
+              <span class="px-3 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-800">Next.js</span>
+              <span class="px-3 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-800">Tailwind CSS</span>
+              <span class="px-3 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-800">Node.js</span>
+              <span class="px-3 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-800">Git</span>
+              <span class="px-3 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-lg text-sm font-medium border border-zinc-200 dark:border-zinc-800">UI/UX Design</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-24 text-center text-sm text-zinc-500 pb-8">
+      <p>&copy; 2026 Rohith. All rights reserved.</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

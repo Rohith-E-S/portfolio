@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+</head>
+
+<body
+  class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans antialiased transition-colors duration-300">
+  <div id="app" class="max-w-5xl mx-auto px-6 py-8 md:px-8">
+    <header class="sticky top-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md py-4 z-50 mb-16">
+      <nav class="flex justify-between items-center">
+        <ul class="flex flex-wrap gap-4 md:gap-6 list-none m-0 p-0">
+          <li><a href="/" class="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white font-medium transition-colors">Home</a></li>
+          <li><a href="/#about" class="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white font-medium transition-colors">About</a></li>
+          <li><a href="/projects.html" class="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white font-medium transition-colors">Projects</a></li>
+          <li><a href="/resume.html" class="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white font-medium transition-colors">Resume</a></li>
+          <li><a href="/contact.html" class="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white font-medium transition-colors">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle theme"
+          class="text-xl p-2 rounded-full hover:scale-110 transition-transform">🌓</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="mb-24 scroll-mt-24">
+        <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4">Hi, I'm <span
+            class="text-black dark:text-white">Rohith</span></h1>
+        <p class="text-xl text-zinc-600 dark:text-zinc-400">A minimalist software engineer & designer.</p>
+      </section>
+
+      <section id="about" class="mb-24 scroll-mt-24">
+        <h2 class="text-2xl font-semibold border-b border-zinc-200 dark:border-zinc-800 pb-2 mb-6">About</h2>
+        <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">I build clean, fast, and accessible web
+          applications. I focus on simplicity, readability, and writing code that speaks for itself.</p>
+      </section>
+
+
+
+
+    </main>
+
+    <footer class="mt-24 text-center text-sm text-zinc-500 pb-8">
+      <p>&copy; 2026 Rohith. All rights reserved.</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
