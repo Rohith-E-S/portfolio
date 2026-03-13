@@ -53,49 +53,47 @@
       </nav>
     </header>
 
-    <main>
+    <main class="fade-in">
       <section id="projects" class="mb-24">
         <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Projects</h1>
         <p class="text-lg text-zinc-600 dark:text-zinc-400 mb-12 max-w-2xl">A collection of things I've built, ranging
           from open-source tools to web applications.</p>
 
-        <div class="grid grid-cols-1 gap-12">
+        <div class="grid grid-cols-1 gap-16">
           <div
-            class="flex flex-col md:flex-row gap-8 items-start bg-zinc-50 dark:bg-zinc-900/50 p-8 rounded-2xl border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800 transition-all">
-            <div class="w-full md:w-5/12 shrink-0">
+            class="group flex flex-col md:flex-row gap-8 items-start bg-zinc-50 dark:bg-zinc-900/50 p-6 md:p-8 rounded-3xl border border-zinc-100 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300 hover:shadow-xl dark:hover:shadow-zinc-900/20">
+            <div class="w-full md:w-5/12 shrink-0 overflow-hidden rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-700">
               <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80"
-                alt="Project One Preview"
-                class="w-full h-auto rounded-xl object-cover aspect-video shadow-md border border-zinc-200 dark:border-zinc-800">
+                alt="Circle-to-Search Desktop Preview"
+                class="w-full h-auto object-cover aspect-video transform group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex flex-col justify-between h-full w-full">
               <div>
-                <h3 class="text-3xl font-bold mb-3">Circle-to-Search Desktop</h3>
-                <p class="text-lg text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">CircleToSearch-desktop is a
+                <h3 class="text-2xl md:text-3xl font-bold mb-3 text-zinc-900 dark:text-zinc-50">Circle-to-Search Desktop</h3>
+                <p class="text-base md:text-lg text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">CircleToSearch-desktop is a
                   high-performance, cross-platform screenshot search tool written in Rust that brings Android's Circle
                   to Search functionality to Desktop. The application captures screen regions and
-                  instantly searches them via Google Lens. It delivers a lightweight binary with async processing,
-                  supporting Wayland, X11, and multiple desktop environments.</p>
+                  instantly searches them via Google Lens.</p>
 
                 <div class="flex flex-wrap gap-2 mb-8">
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">Rust</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">Rust</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">GTK4</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">GTK4</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">Cross-Platform</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">Cross-Platform</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">Linux</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">Linux</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">Windows</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">Windows</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">Python</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">Python</span>
                 </div>
               </div>
 
               <div class="flex gap-4">
-
                 <a href="https://github.com/Rohith-E-S/CircleToSearch-desktop"
-                  class="inline-flex items-center px-5 py-2.5 bg-transparent border border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 text-sm font-semibold rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors">
+                  class="inline-flex items-center px-4 py-2 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors shadow-sm">
                   GitHub
                   <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill-rule="evenodd"
@@ -108,38 +106,36 @@
           </div>
 
           <div
-            class="flex flex-col md:flex-row-reverse gap-8 items-start bg-zinc-50 dark:bg-zinc-900/50 p-8 rounded-2xl border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800 transition-all">
-            <div class="w-full md:w-5/12 shrink-0">
-              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="Project Two Preview"
-                class="w-full h-auto rounded-xl object-cover aspect-video shadow-md border border-zinc-200 dark:border-zinc-800">
+            class="group flex flex-col md:flex-row-reverse gap-8 items-start bg-zinc-50 dark:bg-zinc-900/50 p-6 md:p-8 rounded-3xl border border-zinc-100 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300 hover:shadow-xl dark:hover:shadow-zinc-900/20">
+            <div class="w-full md:w-5/12 shrink-0 overflow-hidden rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-700">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="Notehub Preview"
+                class="w-full h-auto object-cover aspect-video transform group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex flex-col justify-between h-full w-full">
               <div>
-                <h3 class="text-3xl font-bold mb-3">Notehub - AI-Powered Note Management System</h3>
-                <p class="text-lg text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">A comprehensive full-stack
+                <h3 class="text-2xl md:text-3xl font-bold mb-3 text-zinc-900 dark:text-zinc-50">Notehub</h3>
+                <p class="text-base md:text-lg text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">A comprehensive full-stack
                   notes application built with PHP and MySQL, featuring secure user
-                  authentication, CRUD operations for notes/tasks/events, AI-powered content summarization using Gemini
-                  API,
-                  real-time search filtering, file attachments, and a responsive dark-mode UI with Tailwind CSS styling.
+                  authentication, CRUD operations, AI-powered content summarization using Gemini
+                  API, and real-time search filtering.
                 </p>
 
                 <div class="flex flex-wrap gap-2 mb-8">
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">PHP</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">PHP</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">MySQL</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">MySQL</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">AI-Integration</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">AI-Integration</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">Tailwind</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">Tailwind</span>
                 </div>
 
               </div>
 
               <div class="flex gap-4">
-
                 <a href="https://github.com/Rohith-E-S/notes"
-                  class="inline-flex items-center px-5 py-2.5 bg-transparent border border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 text-sm font-semibold rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors">
+                  class="inline-flex items-center px-4 py-2 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors shadow-sm">
                   GitHub
                   <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill-rule="evenodd"
@@ -152,38 +148,34 @@
           </div>
 
           <div
-            class="flex flex-col md:flex-row gap-8 items-start bg-zinc-50 dark:bg-zinc-900/50 p-8 rounded-2xl border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800 transition-all">
-            <div class="w-full md:w-5/12 shrink-0">
+            class="group flex flex-col md:flex-row gap-8 items-start bg-zinc-50 dark:bg-zinc-900/50 p-6 md:p-8 rounded-3xl border border-zinc-100 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300 hover:shadow-xl dark:hover:shadow-zinc-900/20">
+            <div class="w-full md:w-5/12 shrink-0 overflow-hidden rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-700">
               <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=800&q=80"
-                alt="Project Three Preview"
-                class="w-full h-auto rounded-xl object-cover aspect-video shadow-md border border-zinc-200 dark:border-zinc-800">
+                alt="Complaint Portal Preview"
+                class="w-full h-auto object-cover aspect-video transform group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex flex-col justify-between h-full w-full">
               <div>
-                <h3 class="text-3xl font-bold mb-3">Complaint Registration Portal - Full-Stack Complaint Management
-                  System </h3>
-                <p class="text-lg text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">A full-stack web application
+                <h3 class="text-2xl md:text-3xl font-bold mb-3 text-zinc-900 dark:text-zinc-50">Complaint Registration Portal</h3>
+                <p class="text-base md:text-lg text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">A full-stack web application
                   enabling users to register and track complaints efficiently. Features user authentication, image
-                  uploads via Cloudinary, geolocation tracking, and admin dashboards. Built with React, Node.js/Express,
-                  MongoDB, JWT security, and Nodemailer email notifications for seamless complaint management and
-                  resolution workflows.</p>
+                  uploads via Cloudinary, geolocation tracking, and admin dashboards.</p>
 
                 <div class="flex flex-wrap gap-2 mb-8">
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">MERN</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">MERN</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">RESTful-API
-                    CSS v4</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">RESTful-API</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">Cloudinary</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">Cloudinary</span>
                   <span
-                    class="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold border border-zinc-200 dark:border-zinc-700">RoleBasedAccess</span>
+                    class="px-2.5 py-1 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-zinc-700 shadow-sm">RBAC</span>
                 </div>
               </div>
 
               <div class="flex gap-4">
                 <a href="https://github.com/Shresth2725/ComplaintRegisterPortal"
-                  class="inline-flex items-center px-5 py-2.5 bg-transparent border border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 text-sm font-semibold rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors">
+                  class="inline-flex items-center px-4 py-2 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors shadow-sm">
                   GitHub
                   <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill-rule="evenodd"
