@@ -6,4 +6,28 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Custom selection color */
+  ::selection {
+    background-color: #18181b;
+    color: #ffffff;
+  }
+  
+  .dark ::selection {
+    background-color: #f4f4f5;
+    color: #09090b;
+  }
+}
+
+@layer utilities {
+  /* Smooth fade in for content */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }

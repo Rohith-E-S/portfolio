@@ -1,53 +1,82 @@
 // Theme Configuration
 const themeToggle = document.getElementById('theme-toggle');
 const root = document.documentElement;
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
-// Function to get the preferred theme
-function getPreferredTheme() {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    return savedTheme;
-  }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-}
+// --- Theme Logic ---
 
-// Set initial theme
-function setTheme(theme) {
+function applyTheme(theme) {
   if (theme === 'dark') {
     root.classList.add('dark');
   } else {
     root.classList.remove('dark');
   }
-  localStorage.setItem('theme', theme);
 }
 
-// Initialize theme on load
-setTheme(getPreferredTheme());
+function getSystemTheme() {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
 
-// Listen for toggle clicks
-themeToggle.addEventListener('click', () => {
-  const isDark = root.classList.contains('dark');
-  setTheme(isDark ? 'light' : 'dark');
-});
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(getSystemTheme());
+  }
+}
 
-// Listen for system theme changes
+// Initialize on load
+initTheme();
+
+// Toggle theme on button click
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isDark = root.classList.contains('dark');
+    const newTheme = isDark ? 'light' : 'dark';
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+}
+
+// Listen for system theme changes (only if no manual override)
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
   if (!localStorage.getItem('theme')) {
-    setTheme(e.matches ? 'dark' : 'light');
+    applyTheme(e.matches ? 'dark' : 'light');
   }
 });
 
-// Smooth scrolling behavior for navigation links
+// --- Mobile Menu Logic ---
+
+if (mobileMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    // Optional: Add aria-expanded attribute toggle
+    const isExpanded = !mobileMenu.classList.contains('hidden');
+    mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+  });
+}
+
+// --- Smooth Scroll Logic ---
+
 document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
-    // Only handle smooth scrolling if we are on the same page
     const targetUrl = new URL(this.href);
+    // Only handle smooth scrolling if we are on the same page
     if (targetUrl.pathname === window.location.pathname) {
       const targetId = targetUrl.hash;
       const targetSection = document.querySelector(targetId);
       
       if (targetSection) {
         e.preventDefault();
+        
+        // Close mobile menu if open
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+
         targetSection.scrollIntoView({
           behavior: 'smooth'
         });
@@ -58,7 +87,7 @@ document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(anchor => {
   });
 });
 
-// Run once on load to handle direct visits to anchor links
+// Handle initial hash on load
 window.addEventListener('load', () => {
   if (window.location.hash) {
     const targetSection = document.querySelector(window.location.hash);
