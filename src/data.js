@@ -27,3 +27,22 @@ export const projects = [
     github: "https://github.com/Rohith-E-S/notes"
   }
 ];
+
+export const certifications = [
+
+  {
+    title: "Language Principle & Finite Automata Theory",
+    organization: "Infosys",
+    date: "Aug 2025"
+  },
+  {
+    title: "Fundamentals of Network Communication",
+    organization: "University of Colorado",
+    date: "Sep 2024"
+  },
+  {
+    title: "Introduction to Hardware and Operating Systems",
+    organization: "IBM",
+    date: "Sep 2024"
+  }
+];

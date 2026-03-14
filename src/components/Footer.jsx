@@ -2,9 +2,9 @@ import React from 'react';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ paddingLeft: '2rem', paddingRight: '2rem' }}>
       <div className="footer-content">
         <p>&copy; {currentYear} Rohith. All rights reserved.</p>
         <div className="footer-socials">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { certifications } from '../data';
 
 function Resume() {
   return (
@@ -97,19 +98,15 @@ function Resume() {
           </div>
         </section>
 
-        {/* Certificates Section */}
+        {/* Certifications Section */}
         <section className="resume-section">
           <h2 className="resume-section-title">Certifications</h2>
           <div className="certificates-container">
-            {[
-              { title: "Fundamentals of Network Communication", org: "University of Colorado", date: "Sep 2024" },
-              { title: "Introduction to Hardware and Operating Systems", org: "IBM", date: "Sep 2024" },
-              { title: "Language Principle & Finite Automata Theory", org: "Infosys", date: "Aug 2025" }
-            ].map(cert => (
+            {certifications.map(cert => (
               <div className="certificate-card" key={cert.title}>
                 <div className="certificate-info">
                   <h3 className="certificate-title">{cert.title}</h3>
-                  <p className="certificate-org">{cert.org}</p>
+                  <p className="certificate-org">{cert.organization}</p>
                 </div>
                 <span className="certificate-date">{cert.date}</span>
               </div>
