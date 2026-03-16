@@ -4,14 +4,14 @@ import { projects } from '../data';
 function Projects() {
   return (
     <div className="page fade-in">
-      <div className="page-header">
+      <div className="page-header reveal">
         <h1 className="page-title">Archive.</h1>
         <p className="page-subtitle">Selected open-source tools and applications emphasizing performance and architecture.</p>
       </div>
 
       <div className="projects-list">
         {projects.map((project) => (
-          <article className="project-card-horizontal" key={project.id}>
+          <article className="project-card-horizontal reveal" key={project.id}>
             <div className="project-image-large">
               <img src={project.image} alt={project.title} />
             </div>

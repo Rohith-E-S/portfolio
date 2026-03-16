@@ -4,7 +4,7 @@ import { certifications, education, training, skills } from '../data';
 function Resume() {
   return (
     <div className="page fade-in">
-      <div className="resume-header">
+      <div className="resume-header reveal">
         <h1 className="page-title" style={{ marginTop: 0, marginBottom: 0 }}>Curriculum Vitae</h1>
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
           Open PDF
@@ -14,7 +14,7 @@ function Resume() {
       <div className="resume-sections">
 
         {/* Education Section */}
-        <section className="resume-section">
+        <section className="resume-section reveal">
           <h2 className="resume-section-title">Education</h2>
           <div className="timeline">
             {education.map((edu, index) => (
@@ -33,7 +33,7 @@ function Resume() {
         </section>
 
         {/* Training Section */}
-        <section className="resume-section">
+        <section className="resume-section reveal">
           <h2 className="resume-section-title">Training & Experience</h2>
           <div className="timeline">
             {training.map((item, index) => (
@@ -56,7 +56,7 @@ function Resume() {
         </section>
 
         {/* Skills Section */}
-        <section className="resume-section">
+        <section className="resume-section reveal">
           <h2 className="resume-section-title">Technical Capabilities</h2>
           <div className="skills-container">
             <div className="skill-group">
@@ -81,7 +81,7 @@ function Resume() {
         </section>
 
         {/* Certifications Section */}
-        <section className="resume-section">
+        <section className="resume-section reveal">
           <h2 className="resume-section-title">Certifications</h2>
           <div className="certificates-container">
             {certifications.map(cert => (
