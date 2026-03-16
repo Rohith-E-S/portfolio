@@ -16,6 +16,13 @@ function Contact() {
           </div>
         </a>
 
+        <a href="mailto:vidaarohith@gmail.com" className="contact-card">
+          <div className="contact-card-content">
+            <h3>Email</h3>
+            <p>vidaarohith@gmail.com</p>
+          </div>
+        </a>
+
         <div className="contact-card" style={{ cursor: 'default' }}>
           <div className="contact-card-content">
             <h3>Location</h3>

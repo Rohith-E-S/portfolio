@@ -25,11 +25,19 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
     tags: ["PHP", "MySQL", "AI-Integration", "Tailwind"],
     github: "https://github.com/Rohith-E-S/notes"
+  },
+  {
+    id: 4,
+    title: "DotDesktop",
+    summary: "DotDesktop is a Qt-based Python GUI application for managing Linux desktop entries. It streamlines customization of application launchers with one-click Wayland/X11 environment overrides for Electron and GTK apps.",
+    description: "DotDesktop is a Qt-based Python GUI application for managing Linux desktop entries. It streamlines customization of application launchers with one-click Wayland/X11 environment overrides for Electron and GTK apps. Features intelligent directory scanning, per-app environment variable injection, and safe restoration to system defaults while maintaining XDG specification compliance.",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+    tags: ["Python", "PySide6 / Qt", "GTK", "XDG Desktop"],
+    github: "https://github.com/Rohith-E-S/DotDesktop"
   }
 ];
 
 export const certifications = [
-
   {
     title: "Language Principle & Finite Automata Theory",
     organization: "Infosys",
@@ -46,3 +54,46 @@ export const certifications = [
     date: "Sep 2024"
   }
 ];
+
+export const education = [
+  {
+    period: "2023 - Present",
+    degree: "B.Tech in Computer Science and Engineering",
+    institution: "Lovely Professional University",
+    location: "Jalandhar, Punjab",
+    grade: "CGPA: 7.45"
+  },
+  {
+    period: "2022 - 2023",
+    degree: "Higher Secondary (12th)",
+    institution: "Bharathi Vidyalaya HSS",
+    location: "Erode, TamilNadu",
+    grade: "Percentage: 87%"
+  },
+  {
+    period: "2020 - 2021",
+    degree: "Secondary (10th)",
+    institution: "Shree Vidyalaya HSS",
+    location: "Erode, TamilNadu",
+    grade: "Percentage: 85%"
+  }
+];
+
+export const training = [
+  {
+    period: "Jun 2025 – Aug 2025",
+    title: "Full Stack (MERN) with Gen AI",
+    organization: "W3Grads",
+    highlights: [
+      "Mastered integration of AI APIs into modern web architectures.",
+      "Engineered a scalable full-stack web application infused with AI-driven features.",
+      "Executed full SDLC resulting in a production build deployed on Netlify."
+    ]
+  }
+];
+
+export const skills = {
+  languages: ["C", "C++", "Java", "JavaScript", "PHP", "Python", "Kotlin"],
+  frameworks: ["React JS", "Node JS", "Android App Dev", "MySQL", "MongoDB"],
+  domains: ["Data Structures", "Responsive Design", "Git", "OS", "Computer Networks"]
+};

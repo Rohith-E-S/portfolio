@@ -1,5 +1,5 @@
 import React from 'react';
-import { certifications } from '../data';
+import { certifications, education, training, skills } from '../data';
 
 function Resume() {
   return (
@@ -17,38 +17,18 @@ function Resume() {
         <section className="resume-section">
           <h2 className="resume-section-title">Education</h2>
           <div className="timeline">
-            <div className="timeline-item">
-              <span className="timeline-date">2023 - Present</span>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>B.Tech in Computer Science and Engineering</h3>
+            {education.map((edu, index) => (
+              <div className="timeline-item" key={index}>
+                <span className="timeline-date">{edu.period}</span>
+                <div className="timeline-content">
+                  <div className="timeline-header">
+                    <h3>{edu.degree}</h3>
+                  </div>
+                  <p className="timeline-subtitle">{edu.institution} &bull; {edu.location}</p>
+                  <p className="text-muted">{edu.grade}</p>
                 </div>
-                <p className="timeline-subtitle">Lovely Professional University &bull; Jalandhar, Punjab</p>
-                <p className="text-muted">CGPA: 7.45</p>
               </div>
-            </div>
-
-            <div className="timeline-item">
-              <span className="timeline-date">2022 - 2023</span>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Higher Secondary (12th)</h3>
-                </div>
-                <p className="timeline-subtitle">Bharathi Vidyalaya HSS &bull; Erode, TamilNadu</p>
-                <p className="text-muted">Percentage: 87%</p>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <span className="timeline-date">2020 - 2021</span>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Secondary (10th)</h3>
-                </div>
-                <p className="timeline-subtitle">Shree Vidyalaya HSS &bull; Erode, TamilNadu</p>
-                <p className="text-muted">Percentage: 85%</p>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -56,20 +36,22 @@ function Resume() {
         <section className="resume-section">
           <h2 className="resume-section-title">Training & Experience</h2>
           <div className="timeline">
-            <div className="timeline-item">
-              <span className="timeline-date">Jun 2025 – Aug 2025</span>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Full Stack (MERN) with Gen AI</h3>
+            {training.map((item, index) => (
+              <div className="timeline-item" key={index}>
+                <span className="timeline-date">{item.period}</span>
+                <div className="timeline-content">
+                  <div className="timeline-header">
+                    <h3>{item.title}</h3>
+                  </div>
+                  <p className="timeline-subtitle">{item.organization}</p>
+                  <ul className="timeline-list">
+                    {item.highlights.map((highlight, i) => (
+                      <li key={i}>{highlight}</li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="timeline-subtitle">W3Grads</p>
-                <ul className="timeline-list">
-                  <li>Mastered integration of AI APIs into modern web architectures.</li>
-                  <li>Engineered a scalable full-stack web application infused with AI-driven features.</li>
-                  <li>Executed full SDLC resulting in a production build deployed on Netlify.</li>
-                </ul>
               </div>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -80,19 +62,19 @@ function Resume() {
             <div className="skill-group">
               <h3 className="skill-category">Languages</h3>
               <div className="skill-tags">
-                {['C', 'C++', 'Java', 'JavaScript', 'PHP', 'Python', 'Kotlin'].map(s => <span key={s} className="tag-solid">{s}</span>)}
+                {skills.languages.map(s => <span key={s} className="tag-solid">{s}</span>)}
               </div>
             </div>
             <div className="skill-group">
               <h3 className="skill-category">Frameworks & Tools</h3>
               <div className="skill-tags">
-                {['React JS', 'Node JS', 'Android App Dev', 'MySQL', 'MongoDB'].map(s => <span key={s} className="tag-solid">{s}</span>)}
+                {skills.frameworks.map(s => <span key={s} className="tag-solid">{s}</span>)}
               </div>
             </div>
             <div className="skill-group">
               <h3 className="skill-category">Domain Expertise</h3>
               <div className="skill-tags">
-                {['Data Structures', 'Responsive Design', 'Git', 'OS', 'Computer Networks'].map(s => <span key={s} className="tag-solid">{s}</span>)}
+                {skills.domains.map(s => <span key={s} className="tag-solid">{s}</span>)}
               </div>
             </div>
           </div>

@@ -12,6 +12,21 @@
         document.documentElement.setAttribute('data-theme', 'dark');
       }
     </script>
+    <style>
+      /* Critical first-paint colors to avoid white flash before app CSS loads */
+      html, body, #root {
+        min-height: 100%;
+        margin: 0;
+        background-color: #faf9f7;
+        color: #1c1b1a;
+        color-scheme: light dark;
+      }
+
+      html[data-theme='dark'], html[data-theme='dark'] body, html[data-theme='dark'] #root {
+        background-color: #121110;
+        color: #f0efeb;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
